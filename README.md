@@ -42,8 +42,8 @@ If you prefer compiling the .proto files yourself, follow these steps:
 **1. Clone the Repository**
 
 ```sh
-git clone https://github.com/your-username/xenoria-protobuf.git
-cd xenoria-protobuf
+git clone https://github.com/vuntex/xenoria-proto.git
+cd xenoria-proto
 ```
 
 **2. Install the Protobuf Compiler (protoc)**
