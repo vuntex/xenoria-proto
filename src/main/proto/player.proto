@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package de.vuntex.xenoria.grpc;
+
+option java_multiple_files = true;
+option java_package = "de.vuntex.xenoria.grpc";
+
+message PlayerJoinRequest {
+  string uuid = 1;
+  string username = 2;
+  string skinSignature = 3;
+  string skinTexture = 4;
+}
+
+message PlayerLoginResponse {
+  string uuid = 1;
+  bool playerLoaded = 2;
+}
+
+service PlayerService {
+  rpc onProxyJoin(PlayerJoinRequest) returns (PlayerLoginResponse);
+}
