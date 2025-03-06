@@ -5,18 +5,18 @@ package de.vuntex.xenoria.grpc;
 option java_multiple_files = true;
 option java_package = "de.vuntex.xenoria.grpc.server";
 
-message ServerRegistrationRequest {
+message ServerStartRequest {
   string serverName = 1;
   string host = 2;
   int32 port = 3;
   bool proxy = 4;
 }
 
-message ServerRegistrationResponse {
-  bool registered = 1;
+message ServerStartResponse {
+  bool successful = 1;
   string message = 2;
 }
 
 service ServerService {
-  rpc registerServer(ServerRegistrationRequest) returns (ServerRegistrationResponse);
+  rpc onServerStart(ServerStartRequest) returns (ServerStartResponse);
 }
