@@ -16,6 +16,13 @@
     <grpc.version>1.69.0</grpc.version>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/vuntex/xenoria-proto</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <!-- gRPC API -->
     <dependency>
